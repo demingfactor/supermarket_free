@@ -1,0 +1,26 @@
+/* Functions.css - Classes only, max length 9 characters */
+.button-primary{
+  padding: 1rem 4rem;
+  border: solid 1px black;
+  font-weight: 600;
+  text-decoration: none;
+}
+.button-disabled{
+  padding: 1rem 4rem;
+  border: solid 2px lightgrey;
+  font-weight: 600;
+  text-decoration: none;
+  color: lightgrey;
+}
+.button-primary:visited{
+  color: black;
+}
+.button-primary:hover{
+  color: white;
+  background-color: #b8c2cc;
+  border: solid 1px #b8c2cc;
+}
+/* add bullets to ul item */
+.bullet{
+  list-style: circle;
+}

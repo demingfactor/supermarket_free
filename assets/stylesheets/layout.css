@@ -1,0 +1,93 @@
+main {
+  padding: 1rem;
+}
+
+  @media (min-width: 768px) {
+    main {
+      display: grid;
+      grid-template-rows: minmax(100px, auto);
+      grid-template-columns: repeat(7, 1fr);
+      grid-gap: 5rem;
+      grid-template-areas:
+        ". logo logo logo logo logo ."
+        ". . nav nav nav . ."
+        ". . . button . . ."
+        ". . wrong wrong wrong  . ."
+        ". . wrong wrong wrong . ."
+        ". . why why why . ."
+        ". . how how how . ."
+        ". . faq faq faq . ."
+        ". . start start start . .";
+    }
+
+    nav > .grid {
+      display: grid;
+      grid-template-rows: auto;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-gap: .5rem;
+      grid-template-areas:
+        "nav1 nav2 nav3"
+    }
+
+    @supports (display: grid) {
+      #logo {
+        grid-area: logo;
+      }
+
+      #nav {
+        grid-area: nav;
+      }
+
+      #nav1 {
+        grid-area: nav1;
+      }
+
+      #nav2 {
+        grid-area: nav2;
+      }
+
+      #nav3 {
+        grid-area: nav3;
+      }
+
+      #wrong {
+        grid-area: wrong;
+      }
+      #why {
+        grid-area: wrong;
+      }
+
+      #how {
+        grid-area: wrong;
+      }
+
+      #faq {
+        grid-area: faq;
+      }
+
+      #start {
+        grid-area: start;
+      }
+
+      .button {
+        grid-area: button;
+      }
+    }
+
+  @media (min-width: 992px) {
+    #timesheet {
+      grid-row: 1;
+      grid-column: 1 / 2;
+    }
+
+    #dashboard {
+      grid-row: 1;
+      grid-column: 2 / 3;
+    }
+
+    #feed {
+      grid-row: 40;
+      grid-column: 2 / 3;
+    }
+  }
+}
