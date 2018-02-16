@@ -5,31 +5,66 @@ main {
   @media (min-width: 768px) {
     main {
       display: grid;
-      grid-template-columns: repeat(7, 1fr);
+      grid-template-columns: repeat(4, 1fr);
       grid-gap: 5rem;
       grid-template-areas:
-        ". logo logo logo logo logo ."
-        ". . nav nav nav . ."
-        ". . . button . . ."
-        ". . wrong wrong wrong  . ."
-        ". . why why why . ."
-        ". . how how how . ."
-        ". . faq faq faq . ."
-        ". . start start start . .";
+        "header header header header"
+        "nav nav nav nav"
+        "wrong wrong wrong wrong"
+        "wrong wrong wrong wrong"
+        "why why why why"
+        "how how how how"
+        "faq faq . ."
+        "start start start start";
     }
 
     nav > .grid {
       display: grid;
       grid-template-rows: auto;
       grid-template-columns: 1fr 1fr 1fr;
-      grid-gap: .5rem;
+      grid-gap: 5rem;
       grid-template-areas:
         "nav1 nav2 nav3"
     }
 
+    #wrong {
+      display: grid;
+      grid-template-rows: auto;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: .5rem;
+      grid-template-areas:
+        "wrong-header market-share-graphic"
+        "wrong-p1 wrong-p2"
+        "wrong-p3 video";
+    }
+
+    #why {
+      display: grid;
+      grid-template-rows: auto;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: .5rem;
+      grid-template-areas:
+        "why-header why-span1"
+    }
+
+    #why-background {
+      height: 100px;
+      grid-row: 3;
+      grid-column: 1 / 5;
+    }
+
+    #how {
+      display: grid;
+      grid-template-rows: auto;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: .5rem;
+      grid-template-areas:
+        "why-header why-span1"
+    }
+
     @supports (display: grid) {
-      #logo {
-        grid-area: logo;
+      #header {
+        grid-area: header ;
       }
 
       #nav {
@@ -50,6 +85,21 @@ main {
 
       #wrong {
         grid-area: wrong;
+      }
+      #wrong-header {
+        grid-area: wrong-header;
+      }
+      #wrong-p1 {
+        grid-area: wrong-p1;
+      }
+      #wrong-p2 {
+        grid-area: wrong-p2;
+      }
+      #wrong-p3 {
+        grid-area: wrong-p3;
+      }
+      #video {
+        grid-area: video;
       }
       #why {
         grid-area: why;
@@ -73,19 +123,6 @@ main {
     }
 
   @media (min-width: 992px) {
-    #timesheet {
-      grid-row: 1;
-      grid-column: 1 / 2;
-    }
 
-    #dashboard {
-      grid-row: 1;
-      grid-column: 2 / 3;
-    }
-
-    #feed {
-      grid-row: 40;
-      grid-column: 2 / 3;
-    }
   }
 }
