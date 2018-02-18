@@ -1,1 +1,19 @@
 /* Variables.css - CSS Variables Only */
+
+.mx-16 {
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+}
+
+.h-128 {
+  height: 32rem;
+}
+
+.w-px-600 {
+  width: 600px;
+}
+
+.py-16 {
+  padding-top: 4rem;
+  padding-bottom: 4rem
+}

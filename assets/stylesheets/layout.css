@@ -4,18 +4,7 @@ main {
 
   @media (min-width: 768px) {
     main {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      grid-gap: 5rem;
-      grid-template-areas:
-        "header header header header"
-        "nav nav nav nav"
-        "wrong wrong wrong wrong"
-        "wrong wrong wrong wrong"
-        "why why why why"
-        "how how how how"
-        "faq faq . ."
-        "start start start start";
+      padding: 0;
     }
 
     nav > .grid {
@@ -27,99 +16,7 @@ main {
         "nav1 nav2 nav3"
     }
 
-    #wrong {
-      display: grid;
-      grid-template-rows: auto;
-      grid-template-columns: 1fr 1fr;
-      grid-gap: .5rem;
-      grid-template-areas:
-        "wrong-header market-share-graphic"
-        "wrong-p1 wrong-p2"
-        "wrong-p3 video";
-    }
 
-    #why {
-      display: grid;
-      grid-template-rows: auto;
-      grid-template-columns: 1fr 1fr;
-      grid-gap: .5rem;
-      grid-template-areas:
-        "why-header why-span1"
-    }
-
-    #why-background {
-      height: 100px;
-      grid-row: 3;
-      grid-column: 1 / 5;
-    }
-
-    #how {
-      display: grid;
-      grid-template-rows: auto;
-      grid-template-columns: 1fr 1fr;
-      grid-gap: .5rem;
-      grid-template-areas:
-        "why-header why-span1"
-    }
-
-    @supports (display: grid) {
-      #header {
-        grid-area: header ;
-      }
-
-      #nav {
-        grid-area: nav;
-      }
-
-      #nav1 {
-        grid-area: nav1;
-      }
-
-      #nav2 {
-        grid-area: nav2;
-      }
-
-      #nav3 {
-        grid-area: nav3;
-      }
-
-      #wrong {
-        grid-area: wrong;
-      }
-      #wrong-header {
-        grid-area: wrong-header;
-      }
-      #wrong-p1 {
-        grid-area: wrong-p1;
-      }
-      #wrong-p2 {
-        grid-area: wrong-p2;
-      }
-      #wrong-p3 {
-        grid-area: wrong-p3;
-      }
-      #video {
-        grid-area: video;
-      }
-      #why {
-        grid-area: why;
-      }
-
-      #how {
-        grid-area: how;
-      }
-
-      #faq {
-        grid-area: faq;
-      }
-
-      #start {
-        grid-area: start;
-      }
-
-      .button {
-        grid-area: button;
-      }
     }
 
   @media (min-width: 992px) {
