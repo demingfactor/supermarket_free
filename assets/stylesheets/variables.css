@@ -1,6 +1,6 @@
 /* Variables.css - CSS Variables Only */
 
-.mx-16 {
+.my-16 {
   margin-top: 4rem;
   margin-bottom: 4rem;
 }
@@ -16,4 +16,9 @@
 .py-16 {
   padding-top: 4rem;
   padding-bottom: 4rem
+}
+
+.mx-32 {
+  margin-left: 8rem;
+  margin-right: 8rem;
 }
