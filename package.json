@@ -9,6 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "font-proxima-nova": "^1.0.1",
     "tailwindcss": "^0.4.1"
   }
 }
