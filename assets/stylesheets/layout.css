@@ -2,7 +2,6 @@
 main {
   margin: auto;
   padding: 1rem;
-  max-width: 37.5rem;
 }
 
   @media (min-width: 768px) {
