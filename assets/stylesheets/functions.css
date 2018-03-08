@@ -27,3 +27,14 @@
 .pb-56{
   padding-bottom:56.25%;
 }
+.bg-sf-blue{
+  background-color: #6DD0F6;
+}
+
+.max-w-1{
+  max-width: 24rem;
+}
+.max-w-2{
+  max-width: 37.5rem;
+
+}
