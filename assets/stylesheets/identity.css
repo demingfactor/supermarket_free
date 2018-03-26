@@ -21,7 +21,7 @@ h1{
   margin: 0 0 1.5rem 0;
 }
 h2{
-  font-size: 36px;
+  font-size: 46px;
   font-weight: bold;
   line-height: 3rem;
   margin: 0 0 1.5rem 0;
@@ -111,10 +111,15 @@ blockquote{
   border-left: dotted 1px black;
   /* font-style: italic; */
 }
-
+.bg-sf-purple{
+  background-color: #6F59A6;
+}
 /* background */
-.header-background{
-  background-image: url("header_background.svg");
+.header-banner{
+  background-image: url("header_background/header_banner.svg");
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: full;
 }
 /* background icons */
 .icon-carrot{

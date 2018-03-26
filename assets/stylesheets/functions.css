@@ -30,11 +30,14 @@
 .bg-sf-blue{
   background-color: #6DD0F6;
 }
-
-.max-w-1{
-  max-width: 24rem;
+.clip{
+   clip-path: polygon(0% 100%, 0% 0%, 100% 0%, 100% 80%,0 100%);
+  -webkit-clip-path: polygon(0% 100%, 0% 0%, 100% 0%, 100% 80%,0 100%);
 }
-.max-w-2{
-  max-width: 37.5rem;
 
+
+/* max-width */
+
+.max-width-4{
+  width:
 }

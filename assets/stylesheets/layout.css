@@ -4,43 +4,74 @@ main {
   padding: 1rem;
 }
 /* displays */
-.grid{
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 10px;
-  grid-auto-rows: minmax(auto);
-}
+
 .col-1 {
   grid-column: 1;
-  grid-row: 2;
 }
 .col-2 {
   grid-column: 2;
-  grid-row: 2;
 }
 .col-3 {
   grid-column: 3;
-  grid-row: 2;
+}
+.col-4 {
+  grid-column: 4;
+}
+
+.col-5 {
+  grid-column: 5;
+}
+.col-6 {
+  grid-column: 6;
+}
+
+.span-1 {
+  grid-column: auto / span 1;
+}
+.span-2 {
+  grid-column: auto / span 2;
+}
+.span-3 {
+  grid-column: auto / span 3;
+}
+.span-4 {
+  grid-column: auto / span 4;
+}
+.span-5 {
+  grid-column: auto / span 5;
+}
+.span-6 {
+  grid-column: auto / span 6;
+}
+
+/* max width */
+.max-w-1{
+max-width: 24rem;
+}
+.max-w-2{
+max-width: 37.5rem;
+
+}
+.max-w-3{
+max-width: 76rem;
+
 }
 
   @media (min-width: 768px) {
-    main {
-      padding: 0;
-    }
 
-    nav > .grid {
+    .grid{
       display: grid;
-      grid-template-rows: auto;
-      grid-template-columns: 1fr 1fr 1fr;
-      grid-gap: 5rem;
-      grid-template-areas:
-        "nav1 nav2 nav3"
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 21px;
+    }
+
     }
 
 
+  @media (min-width:992px) {
+    header{
+      height: 100%;
+      min-height: 35rem;
     }
-
-  @media (min-width: 992px) {
-
   }
 }
