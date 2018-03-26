@@ -111,3 +111,80 @@ blockquote{
   border-left: dotted 1px black;
   /* font-style: italic; */
 }
+
+/* background */
+.header-background{
+  background-image: url("header_background.svg");
+}
+/* background icons */
+.icon-carrot{
+  background-image: url("icons/carrot.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.icon-banana{
+  background-image: url("icons/banana.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.icon-apple{
+  background-image: url("icons/apple.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.icon-apple-h{
+  background-image: url("icons/apple_h.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.icon-avocado{
+  background-image: url("icons/avocado.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.icon-avocado-h{
+  background-image: url("icons/avocado_h.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.icon-lemon{
+  background-image: url("icons/lemon.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.icon-two-lemons{
+  background-image: url("icons/two_lemons.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.icon-orange{
+  background-image: url("icons/orange.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.icon-two-oranges{
+  background-image: url("icons/two_oranges.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.icon-tomato{
+  background-image: url("icons/tomato.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.icon-two-tomatos{
+  background-image: url("icons/two_tomotos.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}

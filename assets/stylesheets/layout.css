@@ -3,6 +3,25 @@ main {
   margin: auto;
   padding: 1rem;
 }
+/* displays */
+.grid{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+  grid-auto-rows: minmax(auto);
+}
+.col-1 {
+  grid-column: 1;
+  grid-row: 2;
+}
+.col-2 {
+  grid-column: 2;
+  grid-row: 2;
+}
+.col-3 {
+  grid-column: 3;
+  grid-row: 2;
+}
 
   @media (min-width: 768px) {
     main {
