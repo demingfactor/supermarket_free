@@ -89,7 +89,7 @@ form>button{
   color: black;
 }
 form>button:hover{
-  border: solid 1px #b8c2cc;
+  /* border: solid 1px #b8c2cc; */
   color: white;
   background-color: #b8c2cc;
 }
@@ -114,6 +114,10 @@ blockquote{
 .bg-sf-purple{
   background-color: #6F59A6;
 }
+.bg-sf-blue{
+  background-color: #0091D5;
+}
+
 /* background */
 .header-banner{
   background-image: url("header_background/header_banner.svg");
@@ -146,20 +150,21 @@ blockquote{
   background-position: center;
 }
 
-.icon-avocado{
-  background-image: url("icons/avocado.svg");
+.icon-avacado{
+  background-image: url("icons/avacado.svg");
   background-repeat: no-repeat;
   background-position: center;
 }
 
-.icon-avocado-h{
-  background-image: url("icons/avocado_h.svg");
+.icon-avacado-h{
+  background-image: url("icons/avacado_h.svg");
   background-repeat: no-repeat;
   background-position: center;
 }
 
 .icon-lemon{
   background-image: url("icons/lemon.svg");
+  background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -189,7 +194,21 @@ blockquote{
 }
 
 .icon-two-tomatos{
-  background-image: url("icons/two_tomotos.svg");
+  background-image: url("icons/two_tomatos.svg");
   background-repeat: no-repeat;
   background-position: center;
 }
+
+.list-disc{
+  list-style: disc;
+}
+
+.bg-left{
+  background-position: left;
+
+}
+ /* custom height */
+
+ .h-240{
+   height:60rem
+ }
