@@ -43,7 +43,7 @@ module.exports = {
   },
   plugins: [
     // Clean the 'dist' folder in production
-    isProd && new CleanWebpackPlugin(['dist']),
+    // isProd && new CleanWebpackPlugin(['dist']),
     new ExtractTextPlugin('[name].[contenthash:8].css'),
     // Scan all the files in the 'src' folder and remove
     // unused class names in production
