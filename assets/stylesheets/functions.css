@@ -1,4 +1,7 @@
 /* Functions.css - Classes only, max length 9 characters */
+.pledge{
+  width:90vw;
+}
 .button-primary{
   padding: 1rem 4rem;
   border: solid 1px black;
@@ -41,12 +44,29 @@
 }
 
 
-/* width */
- .w-
+/* custom width */
 
-/* list style Modifires */
+ /* custom height */
+
+ .m-h-100{
+   min-height: 25rem;
+ }
+
+ .m-h-120{
+   min-height: 30rem;
+ }
+ .max-h-186{
+   max-height: 46.5rem;
+ }
 
 
+/* custom space Modifires */
+.mb-20{
+  margin-bottom: 5rem;
+}
+.sm:.mb-20{
+  margin-bottom: 5rem;
+}
 
 /* overflow-modifiers */
 .overflow-x-hidden{
@@ -66,6 +86,7 @@
 .right-12{
   right: 3rem;
 }
+
 .bottom-28{
   bottom: 7rem;
 }
@@ -73,3 +94,16 @@
 .-z-10{
   z-index: -10;
 }
+
+  @media (min-width:992px) {
+    header{
+      height: 100%;
+      min-height: 35rem;
+    }
+    .header-banner{
+      background-position: 50% center;
+    }
+    .pledge{
+      width: 40vw;
+    }
+  }
