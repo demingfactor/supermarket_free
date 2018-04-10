@@ -67,16 +67,4 @@ main {
 
     }
 
-  @media (min-width:992px) {
-    header{
-      height: 100%;
-      min-height: 35rem;
-    }
-    .header-banner{
-      background-position: 50% center;
-    }
-    .pledge{
-      width: 40vw;
-    }
-  }
 }
