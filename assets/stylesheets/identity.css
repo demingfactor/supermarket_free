@@ -100,9 +100,12 @@ th{
   font-weight: 300;
 }
 a{
+  text-decoration: none;
   font-weight: 400;
   color: #03359A;
 }
+
+
 blockquote{
   font-size: 23.04px;
   font-weight: 300;
