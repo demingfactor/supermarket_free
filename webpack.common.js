@@ -1,8 +1,5 @@
 const webpack = require('webpack')
 
-// Bundles (CSS) to own CSS file rather than embedded in CSS.
-const ExtractTextPlugin = require('extract-text-webpack-plugin')
-
 // Autogenerates index.js into a index.html with auto script tags
 const HtmlWebpackPlugin = require('html-webpack-plugin') //
 
@@ -11,6 +8,11 @@ const PurgecssPlugin = require('purgecss-webpack-plugin')
 
 // Wipes dist directory on recompiling, keeping the directory clean.
 const CleanWebpackPlugin = require('clean-webpack-plugin')
+
+// Bundles (CSS) to own CSS file rather than embedded in CSS.
+const ExtractTextPlugin = require("extract-text-webpack-plugin");
+
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 const tailwindcss = require('tailwindcss')
 const glob = require('glob')
@@ -34,24 +36,7 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
     filename: '[name].[chunkhash:8].js',
     chunkFilename: '[name].[chunkhash:8].js',
-    publicPath: '/'
-  },
-  module: {
-    rules: [{
-      test: /\.css$/,
-      use: ExtractTextPlugin.extract({
-        fallback: 'style-loader',
-        use: [{
-            loader: 'css-loader',
-            options: {
-              importLoaders: 1,
-              minimize: isProd
-            }
-          },
-          'postcss-loader'
-        ]
-      })
-    }]
+    publicPath: './'
   },
   plugins: [
     // Clean the 'dist' folder in production
@@ -68,6 +53,23 @@ module.exports = {
         extensions: ['html', 'js']
       }]
     }),
+    new CopyWebpackPlugin([{
+      context: 'src/assets/stylesheets/',
+      from: '*.css',
+      to: path.resolve(__dirname, 'dist/assets/stylesheets/')
+    }, {
+      context: 'src/assets/images/',
+      from: '*.png',
+      to: path.resolve(__dirname, 'dist/assets/images/')
+    }, {
+      context: 'src/assets/stylesheets/icons',
+      from: '*.svg',
+      to: path.resolve(__dirname, 'dist/assets/stylesheets/icons/')
+    }, {
+      context: 'src/assets/stylesheets/header_background',
+      from: '*.svg',
+      to: path.resolve(__dirname, 'dist/assets/stylesheets/header_background/')
+    }]),
     new HtmlWebpackPlugin({
       inject: true,
       template: './src/index.html',
