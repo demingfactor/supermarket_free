@@ -1,8 +1,17 @@
 const webpack = require('webpack')
+
+// Bundles (CSS) to own CSS file rather than embedded in CSS.
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
-const HtmlWebpackPlugin = require('html-webpack-plugin')
+
+// Autogenerates index.js into a index.html with auto script tags
+const HtmlWebpackPlugin = require('html-webpack-plugin') //
+
+// Purges unused CSS (Great for use with a style framework like Tailwind)
 const PurgecssPlugin = require('purgecss-webpack-plugin')
+
+// Wipes dist directory on recompiling, keeping the directory clean.
 const CleanWebpackPlugin = require('clean-webpack-plugin')
+
 const tailwindcss = require('tailwindcss')
 const glob = require('glob')
 const path = require('path')
@@ -28,18 +37,21 @@ module.exports = {
     publicPath: '/'
   },
   module: {
-    rules: [
-      {
-        test: /\.css$/,
-        use: ExtractTextPlugin.extract({
-          fallback: 'style-loader',
-          use: [
-            { loader: 'css-loader', options: { importLoaders: 1, minimize: isProd } },
-            'postcss-loader'
-          ]
-        })
-      }
-    ]
+    rules: [{
+      test: /\.css$/,
+      use: ExtractTextPlugin.extract({
+        fallback: 'style-loader',
+        use: [{
+            loader: 'css-loader',
+            options: {
+              importLoaders: 1,
+              minimize: isProd
+            }
+          },
+          'postcss-loader'
+        ]
+      })
+    }]
   },
   plugins: [
     // Clean the 'dist' folder in production
@@ -49,14 +61,12 @@ module.exports = {
     // unused class names in production
     isProd && new PurgecssPlugin({
       paths: glob.sync(path.join(__dirname, 'src') + '/**/*'),
-      extractors: [
-        {
-          extractor: TailwindExtractor,
-          // Specify the file extensions to include when scanning for
-          // class names.
-          extensions: ['html', 'js']
-        }
-      ]
+      extractors: [{
+        extractor: TailwindExtractor,
+        // Specify the file extensions to include when scanning for
+        // class names.
+        extensions: ['html', 'js']
+      }]
     }),
     new HtmlWebpackPlugin({
       inject: true,
