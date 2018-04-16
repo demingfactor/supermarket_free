@@ -44,7 +44,9 @@
 
 
 /* custom width */
-
+.w-62{
+  width: 62vw;
+}
  /* custom height */
 
  .m-h-100{
@@ -54,6 +56,9 @@
  .m-h-120{
    min-height: 30rem;
  }
+ .m-h-152{
+   min-height: 38rem;
+ }
  .max-h-186{
    max-height: 46.5rem;
  }
@@ -62,6 +67,9 @@
 /* custom space Modifires */
 .mb-20{
   margin-bottom: 5rem;
+}
+.mb-28{
+  margin-bottom: 7rem;
 }
 .sm:.mb-20{
   margin-bottom: 5rem;
