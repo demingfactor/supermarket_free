@@ -15,7 +15,6 @@ const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const UrlLoader = require("url-loader");
 const FileLoader = require("file-loader");
 
-
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 const tailwindcss = require('tailwindcss')
@@ -44,15 +43,22 @@ module.exports = {
   },
   module: {
     rules: [{
-      test: /\.(png|jp(e*)g|svg)$/,
-      use: [{
-        loader: 'url-loader',
-        options: {
-          limit: 8000, // Convert images < 8kb to base64 strings
-          name: 'assets/images/[hash]-[name].[ext]'
-        }
-      }]
-    }]
+        test: /\.(png|jp(e*)g|svg)$/,
+        use: [{
+          loader: 'url-loader',
+          options: {
+            limit: 8000, // Convert images < 8kb to base64 strings
+            name: 'assets/images/[hash]-[name].[ext]'
+          }
+        }]
+      },
+      {
+        test: /\.(woff|woff2|eot|ttf|otf)$/,
+        use: [
+          'file-loader'
+        ]
+      }
+    ]
   },
   plugins: [
     // Clean the 'dist' folder in production
