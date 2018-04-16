@@ -36,8 +36,9 @@
 }
 
 .clip-2{
-clip-path: polygon(100% 0, 100% 95%, 0% 100%, 0 10%);
--webkit-clip-path: polygon(100% 0, 100% 95%, 0% 100%, 0 20%);
+  clip-path: polygon(100% 0, 100% 95%, 0% 100%, 0 5%);
+  -webkit-clip-path: polygon(100% 0, 100% 95%, 0% 100%, 0 5%);
+}
 }
 
 
