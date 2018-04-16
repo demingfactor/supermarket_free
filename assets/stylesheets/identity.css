@@ -21,7 +21,7 @@ h1{
   margin: 0 0 1.5rem 0;
 }
 h2{
-  font-size: 46px;
+  font-size: 38px;
   font-weight: bold;
   line-height: 3rem;
   margin: 0 0 1.5rem 0;
@@ -214,4 +214,9 @@ blockquote{
 
  .h-240{
    height:60rem
+ }
+   @media (min-width:992px) {
+   h2{
+     font-size: 54px;
+   }
  }
