@@ -1,12 +1,10 @@
 /* Functions.css - Classes only, max length 9 characters */
-.pledge{
-  width:90vw;
-}
 .button-primary{
-  padding: 1rem 4rem;
+  padding: .5rem 2rem;
   border: solid 1px white;
   font-weight: 600;
   text-decoration: none;
+  transition: 0.2s;
 }
 .button-disabled{
   padding: 1rem 4rem;
@@ -33,19 +31,23 @@
   background-color: #6DD0F6;
 }
 .clip{
-   clip-path: polygon(0% 100%, 0% 0%, 100% 0%, 100% 80%,0 100%);
-  -webkit-clip-path: polygon(0% 100%, 0% 0%, 100% 0%, 100% 80%,0 100%);
+  clip-path: polygon(0% 100%, 0% 0%, 100% 0%, 100% 95%,0 100%);
+  -webkit-clip-path: polygon(0% 100%, 0% 0%, 100% 0%, 100% 95%,0 100%);
 }
 
 .clip-2{
-  clip-path: polygon(100% 0, 100% 90%, 0% 100%, 0 10%);
-  -webkit-clip-path: polygon(100% 0, 100% 80%, 0% 100%, 0 20%);
+  clip-path: polygon(100% 0, 100% 95%, 0% 100%, 0 5%);
+  -webkit-clip-path: polygon(100% 0, 100% 95%, 0% 100%, 0 5%);
+}
 }
 
 
 /* custom width */
 .w-62{
   width: 62vw;
+}
+.title-width{
+  width: 16rem;
 }
  /* custom height */
 
@@ -68,11 +70,17 @@
 .mb-20{
   margin-bottom: 5rem;
 }
+.mr-20{
+  margin-right: 5rem;
+}
 .mb-28{
   margin-bottom: 7rem;
 }
 .sm:.mb-20{
   margin-bottom: 5rem;
+}
+.title-margin{
+  margin-bottom: 2rem;
 }
 
 /* overflow-modifiers */
@@ -110,7 +118,28 @@
     .header-banner{
       background-position: 50% center;
     }
-    .pledge{
-      width: 40vw;
+    .title-margin{
+      margin-bottom: 5rem;
+    }
+    .title-width{
+      width: 20rem;
+    }
+    h2{
+      font-size: 54px;
+    }
+    .button-primary{
+      padding: 1rem 3rem;
+      border: solid 1px white;
+      font-weight: 600;
+      text-decoration: none;
+    }
+    .clip{
+       clip-path: polygon(0% 100%, 0% 0%, 100% 0%, 100% 80%,0 100%);
+      -webkit-clip-path: polygon(0% 100%, 0% 0%, 100% 0%, 100% 80%,0 100%);
+    }
+
+    .clip-2{
+      clip-path: polygon(100% 0, 100% 80%, 0% 100%, 0 10%);
+      -webkit-clip-path: polygon(100% 0, 100% 80%, 0% 100%, 0 20%);
     }
   }

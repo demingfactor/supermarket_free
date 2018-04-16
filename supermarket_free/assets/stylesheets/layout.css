@@ -1,0 +1,27 @@
+
+main {
+  margin: auto;
+  padding: 1rem;
+}
+
+  @media (min-width: 768px) {
+    main {
+      padding: 0;
+    }
+
+    nav > .grid {
+      display: grid;
+      grid-template-rows: auto;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-gap: 5rem;
+      grid-template-areas:
+        "nav1 nav2 nav3"
+    }
+
+
+    }
+
+  @media (min-width: 992px) {
+
+  }
+}
