@@ -12,17 +12,28 @@ module.exports = merge(common, {
   },
   module: {
     rules: [{
-      test: /\.css$/,
-      use: ExtractTextPlugin.extract({
-        fallback: 'style-loader',
+        test: /\.css$/,
+        use: ExtractTextPlugin.extract({
+          fallback: 'style-loader',
+          use: [{
+            loader: 'css-loader',
+            options: {
+              importLoaders: 1,
+              minimise: true
+            }
+          }, 'postcss-loader']
+        })
+      },
+      {
+        test: /\.(png|jp(e*)g|svg)$/,
         use: [{
-          loader: 'css-loader',
+          loader: 'url-loader',
           options: {
-            importLoaders: 1,
-            minimise: true
+            limit: 8000, // Convert images < 8kb to base64 strings
+            name: 'assets/images/[hash]-[name].[ext]'
           }
-        }, 'postcss-loader']
-      })
-    }]
+        }]
+      }
+    ]
   }
 });

@@ -12,6 +12,10 @@ const CleanWebpackPlugin = require('clean-webpack-plugin')
 // Bundles (CSS) to own CSS file rather than embedded in CSS.
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 
+const UrlLoader = require("url-loader");
+const FileLoader = require("file-loader");
+
+
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 const tailwindcss = require('tailwindcss')
@@ -37,6 +41,18 @@ module.exports = {
     filename: '[name].[chunkhash:8].js',
     chunkFilename: '[name].[chunkhash:8].js',
     publicPath: './'
+  },
+  module: {
+    rules: [{
+      test: /\.(png|jp(e*)g|svg)$/,
+      use: [{
+        loader: 'url-loader',
+        options: {
+          limit: 8000, // Convert images < 8kb to base64 strings
+          name: 'assets/images/[hash]-[name].[ext]'
+        }
+      }]
+    }]
   },
   plugins: [
     // Clean the 'dist' folder in production

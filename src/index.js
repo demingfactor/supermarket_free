@@ -1,2 +1,2 @@
 import './styles.css'
-// import './assets/stylesheets/identity.css'
+import './assets/stylesheets/identity.css'
